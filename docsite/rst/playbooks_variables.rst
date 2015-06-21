@@ -3,7 +3,7 @@ Variables
 
 .. contents:: Topics
 
-While automation exists to make it easier to make things repeatable, all of your systems are likely not exactly alike.
+While automation exists to make it easier to make things r{ name: apache, http_port: 8080 }epeatable, all of your systems are likely not exactly alike.
 
 On some systems you may want to set some behavior or configuration that is slightly different from others. 
 
@@ -782,7 +782,7 @@ Parameterized roles are useful.
 If you are using a role and want to override a default, pass it as a parameter to the role like so::
 
     roles:
-       - { name: apache, http_port: 8080 }
+       - { role: apache, http_port: 8080 }
 
 This makes it clear to the playbook reader that you've made a conscious choice to override some default in the role, or pass in some
 configuration that the role can't assume by itself.  It also allows you to pass something site-specific that isn't really part of the
